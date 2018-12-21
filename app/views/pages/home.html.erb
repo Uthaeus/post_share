@@ -1,2 +1,29 @@
-<h1>Welcome</h1>
-<p>this is the homepage</p>
+<div class="home">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container justify-content-center">
+                    <h1 class="display-4">Welcome</h1>
+                    <p class="lead">Some more welcoming content here</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <header class="text-center">
+                <h2>Recent Posts</h2>
+            </header>
+            <% @posts.each do |post| %>
+                <div class="card" style="margin: 15px;">
+                    <div class="row">
+                        <div class="col-md-8" style="padding: 10px;">
+                            <%= image_tag post.thumb_image, width: '60%' %>
+                        </div>
+                        <div class="col-md-4">
+                            <%= post.title %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
