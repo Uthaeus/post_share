@@ -1,9 +1,16 @@
+
 <div class="home">
     <div class="row">
         <div class="col-md-6">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container justify-content-center">
-                    <h1 class="display-4">Welcome</h1>
+                    <h1 class="display-4">
+                        <% if current_user %>
+                            Welcome, <%= current_user.first_name %>
+                        <% else %>
+                            Welcome!
+                        <% end %>
+                    </h1>
                     <p class="lead">Some more welcoming content here</p>
                 </div>
             </div>
