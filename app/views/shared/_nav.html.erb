@@ -17,6 +17,9 @@
         </li>
         <% if current_user %>
             <li class="nav-item">
+                <%= link_to "My Dash", pages_mydash_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
                 <%= link_to "Edit Registration", edit_user_registration_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">

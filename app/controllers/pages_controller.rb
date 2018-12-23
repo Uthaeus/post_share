@@ -8,4 +8,8 @@ class PagesController < ApplicationController
 
   def faq
   end
+
+  def mydash
+    @posts = Post.posts_by(current_user)
+  end
 end
