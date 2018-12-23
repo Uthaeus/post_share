@@ -1,5 +1,14 @@
 <div class="container">
     <% @posts.each do |post| %>
-        <p><%= post.title %></p>
+        <div class="row">
+            <div class="col-lg-8">
+                <%= link_to post_path(post) do %>
+                    <div class="card" style="margin: 25px; padding: 15px;">
+                        <p><%= post.title %></p>
+                        <p><%= post.user.name %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
     <% end %>
 </div>
