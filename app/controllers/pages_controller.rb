@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @posts = Post.all 
+    @posts = Post.all.last(3)
   end
 
   def about

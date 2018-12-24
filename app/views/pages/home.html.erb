@@ -26,7 +26,8 @@
                             <%= image_tag post.thumb_image, width: '60%' %>
                         </div>
                         <div class="col-md-4" style="margin-top: 10%;">
-                            <%= link_to post.title, post_path(post) %>
+                            <h3><%= link_to post.title, post_path(post) %></h3>
+                            <p><small>Last updated <%= distance_of_time_in_words(post.updated_at, Time.now)%> ago</small></p>
                         </div>
                     </div>
                 </div>
