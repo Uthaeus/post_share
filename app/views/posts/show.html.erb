@@ -12,6 +12,10 @@
 </div>
 
 <div style="position: fixed; bottom: 0;">
-  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-light' %> |
+  <% if current_user %>
+    <% if current_user.id == @post.user_id %>
+      <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-light' %> |
+    <% end %>
+  <% end %>
   <%= link_to 'Back', posts_path, class: 'btn btn-light' %>
 </div>
